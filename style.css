@@ -1,0 +1,309 @@
+
+.playfair-display-<uniquifier> {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+:root {
+  --principal: #faf8f3;
+  --secondaire: #f5f1e8;
+  --sable: #e8dcc8;
+  --beige-dore: #d4c5a9;
+  --brun-dore : #8b6f47;
+  --brun-fonce: #6d5638;
+  --brun-clair: #a08060;
+  --brun-tres-fonce: #2c1810;
+  --orange: 	#d4af37;
+  --orange-hover:#c49f2d;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+}
+
+.header {
+    /* Active le mode Flexbox pour aligner les enfants */
+    display: flex;
+    /* Aligne les éléments verticalement au centre */
+    align-items: center;
+    /* Ajoute un peu d'espace entre le logo et le titre */
+    gap: 15px;
+}
+
+.logo {
+    /* Définit une largeur fixe pour éviter qu'il ne soit trop grand */
+    width: 150px; 
+    height: 150px;
+}
+
+h2 {
+  font-family: 'Playfair Display';
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--brun-tres-fonce);
+}
+
+header {
+  background-color: var(--secondaire);
+}
+
+.align {
+  margin-left: 10.5rem;
+  color: var(--brun-dore);
+  font-size: 16px;
+}
+
+/* Le conteneur principal devient sticky */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--secondaire);
+    display: flex;
+    justify-content: space-between; /* Espace le bloc gauche du menu */
+    align-items: center;
+    padding: 10px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Bloc gauche : Logo + Titres */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 80px; /* Ajusté pour que ce soit plus harmonieux dans un header */
+    height: auto;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; /* Taille réduite pour tenir dans le header */
+    margin: 0;
+    color: var(--brun-tres-fonce);
+}
+
+.subtitle {
+    margin: 0;
+    color: var(--brun-dore);
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Menu navigation */
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--brun-tres-fonce);
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
+.nav-menu a:hover {
+    color: var(--brun-dore);
+}
+
+h1 {
+  font-family: 'Playfair Display';
+  font-size: 96px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--brun-dore);
+  margin-bottom: 60px;
+}
+
+.intro {
+  text-align: center;
+  color: var(--brun-fonce);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lato";
+  gap: 15px;
+  font-size: 24px;
+}
+
+/* Création du trait gauche */
+.intro::before {
+    content: ""; /* Obligatoire pour afficher le pseudo-élément */
+    height: 1px; /* Épaisseur du trait */
+    background-color: var(--brun-fonce); /* Couleur du trait */
+    width: 120px;
+}
+
+/* Création du trait droit */
+.intro::after {
+    content: "";
+    height: 1px;
+    background-color: var(--brun-fonce);
+    width: 120px;
+}
+
+button {
+  color: var(--brun-tres-fonce);
+  background-color: var(--orange);
+  font-size: 16px;
+  font-family: 'Lato';
+  font-weight: 500;
+  display: block;
+  margin: auto;
+  border: none;
+  margin-top: 60px;
+  width: 600px;
+  height: 60px;
+}
+
+button:hover {
+  background-color: var(--orange-hover);
+}
+
+.img {
+  background-image: url('/img/3.webp');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  
+  /* Ajoute cet espace en bas du bloc */
+  padding-bottom: 100px; 
+  
+  /* Optionnel : si tu veux aussi de l'espace en haut */
+  padding-top: 50px; 
+}
+
+.card {
+    /* Mise en forme de la boîte */
+    padding: 40px 20px;
+    border: 1px solid var(--brun-dore); /* Bordure fine dorée */
+    background-color: var(--secondaire); /* Fond couleur papier */
+    
+    /* Centrage du contenu */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    /* Contraintes de taille */
+    max-width: 300px;
+    margin: 20px auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.card-icon {
+    margin-bottom: 15px;
+    color: var(--brun-dore); /* Assure que l'icône prend la couleur dorée */
+    width: 45px;
+    height: 45px;
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--brun-tres-fonce);
+    margin: 0 0 10px 0;
+}
+
+.card-subtitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: var(--brun-dore);
+    margin: 0;
+}
+
+.titre {
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    margin-top: 60px;
+}
+
+.titre::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    
+    width: 150px;
+    height: 5px;
+    background-color: var(--brun-dore);
+}
+
+.para {
+  color: var(--brun-dore);
+
+}
