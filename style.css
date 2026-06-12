@@ -526,3 +526,73 @@ button:hover {
 .contact-item a:hover {
     color: var(--orange);
 }
+
+/* --- TABLETTES (Largeur max 900px) --- */
+@media (max-width: 900px) {
+    h1 { font-size: 60px; }
+    
+    /* On force les cartes à être plus étroites sur tablette */
+    .card { width: 45%; }
+    .cards-wrapper { max-width: 95%; }
+    
+    .gallery-container { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* --- MOBILES (Largeur max 600px) --- */
+@media (max-width: 600px) {
+    /* Header compact */
+    .site-header { padding: 10px 15px; }
+    .nav-menu ul { gap: 10px; font-size: 12px; }
+    
+    /* Hero Section */
+    h1 { font-size: 40px; margin-top: 50px; }
+    button { width: 90%; }
+    
+    /* Grille de cartes en colonne unique */
+    .cards-wrapper { flex-direction: column; align-items: center; }
+    .card { width: 90%; }
+    
+    /* Galerie en colonne unique */
+    .gallery-container { grid-template-columns: 1fr; }
+    
+    /* Footer & Contact */
+    .contact-grid { flex-direction: column; gap: 20px; }
+}
+
+/* Ajoute ceci à la fin de ton fichier CSS */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column; /* Empile logo et menu */
+        padding: 20px;
+    }
+    
+    .nav-menu ul {
+        flex-direction: column; /* Menu en liste verticale */
+        gap: 10px;
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 48px; margin-bottom: 20px; }
+    
+    /* Le bouton prend toute la largeur disponible */
+    button { 
+        width: 90%; 
+        max-width: 300px;
+        margin-top: 30px;
+    }
+}
+
+/* Règle d'or pour éviter tout débordement */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Assure-toi que les sections ne sont pas trop larges */
+section, .card, .cards-wrapper {
+    box-sizing: border-box; /* Important pour que le padding n'ajoute pas de largeur */
+    width: 100%;
+}
