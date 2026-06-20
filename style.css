@@ -84,16 +84,12 @@
 }
 
 .header {
-    /* Active le mode Flexbox pour aligner les enfants */
     display: flex;
-    /* Aligne les éléments verticalement au centre */
     align-items: center;
-    /* Ajoute un peu d'espace entre le logo et le titre */
     gap: 15px;
 }
 
 .logo {
-    /* Définit une largeur fixe pour éviter qu'il ne soit trop grand */
     width: 150px; 
     height: 150px;
 }
@@ -115,20 +111,18 @@ header {
   font-size: 16px;
 }
 
-/* Le conteneur principal devient sticky */
 .site-header {
     position: sticky;
     top: 0;
     z-index: 1000;
     background-color: var(--secondaire);
     display: flex;
-    justify-content: space-between; /* Espace le bloc gauche du menu */
+    justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Bloc gauche : Logo + Titres */
 .header-left {
     display: flex;
     align-items: center;
@@ -136,13 +130,13 @@ header {
 }
 
 .logo {
-    width: 80px; /* Ajusté pour que ce soit plus harmonieux dans un header */
+    width: 80px;
     height: auto;
 }
 
 .title {
     font-family: 'Playfair Display', serif;
-    font-size: 32px; /* Taille réduite pour tenir dans le header */
+    font-size: 32px;
     margin: 0;
     color: var(--brun-tres-fonce);
 }
@@ -155,7 +149,6 @@ header {
     letter-spacing: 1px;
 }
 
-/* Menu navigation */
 .nav-menu ul {
     display: flex;
     list-style: none;
@@ -195,15 +188,13 @@ h1 {
   font-size: 24px;
 }
 
-/* Création du trait gauche */
 .intro::before {
-    content: ""; /* Obligatoire pour afficher le pseudo-élément */
-    height: 1px; /* Épaisseur du trait */
-    background-color: var(--brun-fonce); /* Couleur du trait */
+    content: "";
+    height: 1px;
+    background-color: var(--brun-fonce);
     width: 120px;
 }
 
-/* Création du trait droit */
 .intro::after {
     content: "";
     height: 1px;
@@ -235,42 +226,33 @@ button:hover {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 80vh;
-  
-  /* Ajoute cet espace en bas du bloc */
   padding-bottom: 100px; 
-  
-  /* Optionnel : si tu veux aussi de l'espace en haut */
   padding-top: 50px; 
 }
 
 .cards-container {
-    display: flex;             /* Active l'alignement horizontal */
-    justify-content: center;   /* Centre les cartes dans la page */
-    gap: 20px;                 /* Ajoute de l'espace entre chaque carte */
-    flex-wrap: wrap;           /* Permet aux cartes de passer à la ligne sur petit écran */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
     padding: 20px;
 }
 
 .card {
-    /* Mise en forme de la boîte */
     padding: 40px 20px;
-    border: 1px solid var(--brun-dore); /* Bordure fine dorée */
-    background-color: var(--secondaire); /* Fond couleur papier */
-    
-    /* Centrage du contenu */
+    border: 1px solid var(--brun-dore);
+    background-color: var(--secondaire);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
-    /* Contraintes de taille */
     max-width: 300px;
     margin: 20px auto;
 }
 
 .card-icon {
     margin-bottom: 15px;
-    color: var(--brun-dore); /* Assure que l'icône prend la couleur dorée */
+    color: var(--brun-dore);
     width: 45px;
     height: 45px;
 }
@@ -302,7 +284,6 @@ button:hover {
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
-    
     width: 150px;
     height: 5px;
     background-color: var(--brun-dore);
@@ -316,16 +297,12 @@ button:hover {
 
 .carte {
   padding: 40px 20px;
-    border: 1px solid var(--brun-dore); /* Bordure fine dorée */
-    background-color: var(--secondaire); /* Fond couleur papier */
-    
-    /* Centrage du contenu */
+    border: 1px solid var(--brun-dore);
+    background-color: var(--secondaire);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
-    /* Contraintes de taille */
     max-width: 300px;
     margin: 20px auto;
     margin-top: 60px;
@@ -333,20 +310,17 @@ button:hover {
 }
 
 .card-flex {
-    display: flex;       /* Aligne les enfants horizontalement */
-    align-items: center; /* Aligne verticalement l'icône et le texte */
-    gap: 10px;           /* Espace entre l'image et le texte */
-    margin-bottom: 15px; /* Espace sous le titre */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
-/* On ajuste l'icône pour qu'elle ne prenne pas trop de place */
 .card-icon {
     width: 30px; 
     height: 30px;
 }
 
-
-/* Le wrapper gère la grille 2x2 */
 .cards-wrapper {
     display: flex;
     justify-content: center;
@@ -355,7 +329,6 @@ button:hover {
     margin: 0 auto;
 }
 
-/* Style uniforme pour TOUTES les cartes */
 .card {
     border: 1px solid var(--brun-dore);
     background-color: var(--secondaire);
@@ -375,72 +348,82 @@ button:hover {
 .card-icon { width: 30px; height: 30px; }
 .card-title { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--brun-tres-fonce); margin: 0; }
 
-/* Ligne produit : le prix est poussé à droite automatiquement */
 .menu-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
     margin-bottom: 8px;
 }
 
 .product-name { font-family: "Lato", sans-serif; color: var(--brun-tres-fonce); margin: 0; }
-.product-price { font-family: "Lato", sans-serif; font-weight: 700; color: var(--brun-tres-fonce); margin: 0; margin-left: 10px; }
 
-/* Conteneur pour grouper le prix et la description */
 .menu-item-wrapper {
-    margin-bottom: 20px; /* Espace entre les produits */
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-/* Le titre et prix (alignés) */
-.menu-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 4px;
-}
-
-/* La description en gris */
-.product-desc {
-    font-family: "Lato", sans-serif;
-    font-size: 13px;
-    color: #888; /* Couleur gris clair */
-    margin: 0;
-}
-
-/* Style pour la description en dessous du produit */
 .product-desc {
     font-family: "Lato", sans-serif;
     font-size: 13px;
     color: #888;
-    margin: 0 0 15px 0; /* Ajoute un espace après chaque produit */
-}
-
-/* Alignement titre et prix */
-.menu-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    margin: 4px 0 15px 0;
 }
 
 .gallery-container {
     display: grid;
-    /* Crée 3 colonnes de taille égale */
     grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; /* Espace entre les images */
+    gap: 20px;
     padding: 40px 20px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
+/* Bande logos marques partenaires */
+.brands-strip {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 700px;
+}
+
+.brands-label {
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--brun-dore);
+    margin-bottom: 20px;
+}
+
+.brands-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.brand-logo {
+    max-height: 50px;
+    max-width: 140px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.brand-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+
 .gallery-img {
     width: 100%;
-    height: 300px; /* Hauteur fixe pour uniformiser la galerie */
-    object-fit: cover; /* Recadre l'image proprement sans déformation */
-    border-radius: 8px; /* Arrondit légèrement les coins */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
-/* Petit effet au survol */
 .gallery-img:hover {
     transform: scale(1.02);
 }
@@ -477,7 +460,7 @@ button:hover {
     font-family: "Lato", sans-serif;
     color: var(--brun-fonce);
     max-width: 500px;
-    margin: 0 auto 20px auto; /* Centre le texte */
+    margin: 0 auto 20px auto;
 }
 
 .social-icon {
@@ -488,7 +471,7 @@ button:hover {
 }
 
 .social-icon:hover {
-    transform: scale(1.1); /* Petit effet au survol */
+    transform: scale(1.1);
 }
 
 .contact-section {
@@ -501,7 +484,7 @@ button:hover {
     display: flex;
     justify-content: center;
     gap: 40px;
-    flex-wrap: wrap; /* S'adapte sur mobile */
+    flex-wrap: wrap;
     margin-top: 30px;
 }
 
@@ -527,47 +510,31 @@ button:hover {
     color: var(--orange);
 }
 
-/* --- TABLETTES (Largeur max 900px) --- */
 @media (max-width: 900px) {
     h1 { font-size: 60px; }
-    
-    /* On force les cartes à être plus étroites sur tablette */
     .card { width: 45%; }
     .cards-wrapper { max-width: 95%; }
-    
     .gallery-container { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* --- MOBILES (Largeur max 600px) --- */
 @media (max-width: 600px) {
-    /* Header compact */
     .site-header { padding: 10px 15px; }
     .nav-menu ul { gap: 10px; font-size: 12px; }
-    
-    /* Hero Section */
     h1 { font-size: 40px; margin-top: 50px; }
     button { width: 90%; }
-    
-    /* Grille de cartes en colonne unique */
     .cards-wrapper { flex-direction: column; align-items: center; }
     .card { width: 90%; }
-    
-    /* Galerie en colonne unique */
     .gallery-container { grid-template-columns: 1fr; }
-    
-    /* Footer & Contact */
     .contact-grid { flex-direction: column; gap: 20px; }
 }
 
-/* Ajoute ceci à la fin de ton fichier CSS */
 @media (max-width: 768px) {
     .site-header {
-        flex-direction: column; /* Empile logo et menu */
+        flex-direction: column;
         padding: 20px;
     }
-    
     .nav-menu ul {
-        flex-direction: column; /* Menu en liste verticale */
+        flex-direction: column;
         gap: 10px;
         text-align: center;
         margin-top: 15px;
@@ -576,8 +543,6 @@ button:hover {
 
 @media (max-width: 600px) {
     h1 { font-size: 48px; margin-bottom: 20px; }
-    
-    /* Le bouton prend toute la largeur disponible */
     button { 
         width: 90%; 
         max-width: 300px;
@@ -585,14 +550,12 @@ button:hover {
     }
 }
 
-/* Règle d'or pour éviter tout débordement */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Assure-toi que les sections ne sont pas trop larges */
 section, .card, .cards-wrapper {
-    box-sizing: border-box; /* Important pour que le padding n'ajoute pas de largeur */
+    box-sizing: border-box;
     width: 100%;
 }
